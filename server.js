@@ -1,17 +1,23 @@
-requires("dotenv").config();
+const dotenv = require("dotenv");
+dotenv.config();
 
-const { default: mongoose } = require('mongoose');
+const  mongoose = require('mongoose');
 
-mongoose.connect(process.env.DATABASE, {
-    useUnifiedTopology: true,
+mongoose.connect(`mongodb+srv://${process.env.DBUSER}:${process.env.DBPASSWORD}@cluster0.2qyykqo.mongodb.net/?retryWrites=true&w=majority`,
+{
     useNewUrlParser: true,
-});
+    useUnifiedTopology: true,
+  },
+  () => {
+    console.log("Mongoose Is Connected");
+  }
+);
 mongoose.connection.on("error", (err)=>{
     console.log("nongoose connection ERROR"+ err.message);
 });
-mongoseErrors.connection.once('open', ()=>{
-    console.log("mongodb connected successfully")
-});
+mongoose.connection.once("open", () => {
+    console.log("MongoDB Connected!");
+  });
 
 // bring in the models
 
@@ -20,7 +26,6 @@ require("./models/Chatroom");
 require("./models/Message");
 
 const app= require('./app');
-const { mongoseErrors } = require('./handlers/errorHandlers');
 
 app.listen(8000, ()=>{
     console.log('the server start on port 8000')
