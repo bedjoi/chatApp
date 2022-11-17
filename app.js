@@ -4,6 +4,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+//brinn in the routes
+app.use(require("./routes/user"));
+
+
 // setup error handlers
 
 const errorHandlers = require('./handlers/errorHandlers');
