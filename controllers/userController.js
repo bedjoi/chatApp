@@ -1,13 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const User = mongoose.model("User");
-const sha256 = require('sha256');
-const jwt = require('jwt');
+const sha256 = require("js-sha256");
+const jwt = require("jwt-then");
 
 exports.register = async (req, res) =>{
 
     const { name,email,password } = req.body;
 
-    const emailRegex = /[@gmail.com|@yahoo.com|@hotmail.com|@live.com]$/;
+    const emailRegex = /@gmail.com|@yahoo.com|@hotmail.com|@live.com/;
 
     if (!emailRegex.test(email))  throw "This email is not a valid email";
     if (password.length < 6) throw "Password must be at least 6 characters";
@@ -25,9 +25,6 @@ exports.register = async (req, res) =>{
     
 };
 
-
- 
-
 exports.login = async (req, res) =>{
     const { email, password } = req.body;
     const user = await User.findOne({
@@ -35,7 +32,11 @@ exports.login = async (req, res) =>{
         password: sha256(password + process.env.SALT),
     });
     if (!user) throw "Email and password did not match";
-    const token =  jwt.sign({id: user.id},process.SECRET);
+    const token = await jwt.sign({ id: user.id },process.SECRET);
+    res.json({
+        message: "user logged successfully",
+        token,
+    })
 
     
 };

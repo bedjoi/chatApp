@@ -5,7 +5,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 //brinn in the routes
-app.use(require("./routes/user"));
+app.use("/user",require("./routes/user"));
 
 
 // setup error handlers
