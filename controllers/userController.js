@@ -12,7 +12,7 @@ exports.register = async (req, res) =>{
     if (!emailRegex.test(email))  throw "This email is not a valid email";
     if (password.length < 6) throw "Password must be at least 6 characters";
 
-    const user = new ({
+    const user = new User({
         name,
         email,
         password: sha256(password + process.env.SALT ),
