@@ -9,8 +9,8 @@ export default function LoginPage() {
                 <label htmlFor="email">Email</label>
                 <input type='text' Name="email" id="inputMail" placeholder='your mail'></input>
                 <label htmlFor="email">password</label>
-                <input type='text' Name="name" id="inputName" placeholder='your password'></input>
-            <button>Submit</button>
+                <input type='password' Name="name" id="inputName" placeholder='your password'></input>
+            <button className='btnLog'>Submit</button>
             </div>  
         </div>
 

@@ -11,7 +11,7 @@
     color: rgb(12, 12, 12);
 }
 .card{
-    background-color: rgb(29, 29, 29);
+    background-color: rgb(0, 0, 0);
     border-radius: 20px;
     width: auto;
     height: 60vh;
@@ -19,19 +19,28 @@
 }
 .login{
     font-size: 40px;
-    color: #e6e6f3;
+    color: #ffffff;
 }
-button{
-    width: 100px;
+.btnLog{
+    width: 150px;
+    height:30px;
+    background-color: rgba(9, 9, 156, 0.568);
+    color: aliceblue;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 130px;
+
 }
 input{
-    color: rgba(14, 14, 14, 0.39);
     width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
 }
 .inputLogin{
     display: grid;
     text-align: left;
     margin: 40px;
     font-size: 20px;
-    gap: 10px
+    gap: 10px;
 }
