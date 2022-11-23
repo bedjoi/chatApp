@@ -44,3 +44,23 @@ input{
     font-size: 20px;
     gap: 10px;
 }
+.navLink{
+    gap: 50px;
+}
+.sidebStyle{
+    background-color: rgba(122, 122, 122, 0.623);
+}
+.navBarSty{
+    background-color: rgb(131, 131, 131);
+
+}
+.sideCard{
+    margin: 10px 0 10px 0;
+    color: black;
+    font-size: 12px;
+    font-style: italic;
+}
+#monLogo{
+    width: 50px !important; 
+    height: 50px !important;
+}

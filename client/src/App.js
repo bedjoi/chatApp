@@ -10,7 +10,8 @@ import Navigation from './component/Navigation';
 function App() {
   return (
     <BrowserRouter>
-      {window.location.pathname !== '/login' && <Navigation />}
+      {window.location.pathname !== '/login' && window.location.pathname !== '/register' && <Navigation />}
+
       <Routes>
         <Route path='/login' element={<LoginPage />} />
         <Route path='/register' element={<RegisterPage />} />
