@@ -1,19 +1,34 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 export default function LoginPage() {
   return (
     <div className='App'>
-        <div className='card'>
+        <div className='cardLogin'>
             <p className='login'>Login</p>
-            <div className="inputLogin">
-                <label htmlFor="email">Email</label>
-                <input type='text' Name="email" id="inputMail" placeholder='your mail'></input>
-                <label htmlFor="email">password</label>
-                <input type='password' Name="name" id="inputName" placeholder='your password'></input>
-            <button className='btnLog'>Submit</button>
-            </div>  
-        </div>
+            <div className='formLogCard'>
+            <Form>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Text className="text-muted">
+              </Form.Text>
+            </Form.Group>
 
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Check me out" />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+         </Form>  
+            </div>
+         </div>
 
     </div>
   )

@@ -5,7 +5,6 @@ export default function Sidebar() {
   return (
     <div>
       <Card className="sideCard">
-        <img></img>
 
         <Card.Body>This is some text within a card body.</Card.Body>
       </Card>

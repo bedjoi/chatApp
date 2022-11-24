@@ -4,17 +4,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Sidebar from '../component/Sidebar';
 import Body from '../component/Body';
-import Online from '../component/Online';
 
-
-export default function GroupesPage() {
+export default function Contacts() {
   return (
     <div>
-      <Container fluid>
+      <Container fluid >
       <Row style={{height: '88.5vh'}}>
           <Col xs="3" className='h-100 sidebStyle'><Sidebar /></Col>
-          <Col xs="7" className='bg-success p-2 text-dark bg-opacity-25'><Body /></Col>
-          <Col xs="2" className='h-100 sidebStyle'><Online /></Col>
+          <Col xs="9" className='bg-success p-2 text-dark bg-opacity-25'><Body /></Col>
 
         </Row>
     </Container>

@@ -2,9 +2,9 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from './pages/Login';
 import RegisterPage from './pages/Register';
-import DashboardPage from './pages/Dashboard';
 import ChatPage from './pages/Chat';
-import Navbar from './component/Navigation';
+import Contacts from './pages/Contacts';
+import Groupes from './pages/Groupes';
 import Navigation from './component/Navigation';
 
 function App() {
@@ -15,9 +15,9 @@ function App() {
       <Routes>
         <Route path='/login' element={<LoginPage />} />
         <Route path='/register' element={<RegisterPage />} />
-        <Route path='/dashboard' element={<DashboardPage />} />
+        <Route path='/contacts' element={<Contacts />} />
         <Route path='/chat' element={<ChatPage />} />
-        <Route path='/navbar' element={<Navbar />} />
+        <Route path='/groups' element={<Groupes />} />
       </Routes>
 
     </BrowserRouter>

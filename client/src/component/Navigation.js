@@ -21,7 +21,7 @@ function Navigation() {
             navbarScroll
           >
             <LinkContainer to="/">
-              <img src={logo} id="monLogo"></img>
+              <img src={logo} id="monLogo" alt='' />
             </LinkContainer>
               <LinkContainer to="/">
                 <Nav.Link >Home</Nav.Link>
@@ -31,7 +31,7 @@ function Navigation() {
             <Nav.Link >Messages</Nav.Link>
             </LinkContainer>
 
-            <LinkContainer to="/contact">
+            <LinkContainer to="/contacts">
                 <Nav.Link >Contact</Nav.Link>
             </LinkContainer>
             
@@ -49,6 +49,11 @@ function Navigation() {
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button>
+            <div className="logOut">
+            <LinkContainer to="/login">
+            <Button variant="outline-success logOut">logOut</Button>
+            </LinkContainer>
+            </div>
           </Form>
         </Navbar.Collapse>
       </Container>
