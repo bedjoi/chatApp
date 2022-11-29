@@ -12,7 +12,7 @@ export default function ChatPage() {
       <Container fluid >
         <Row style={{height: '88.5vh'}}>
           <Col xs="3" className='h-100 sidebStyle'><Sidebar /></Col>
-          <Col xs="7" className='bg-success p-2 text-dark bg-opacity-25 msgBody'><Body /></Col>
+          <Col xs="7" className='msgBody'><Body /></Col>
           <Col xs="2" className='h-100 sidebStyle'><Online /></Col>
 
         </Row>

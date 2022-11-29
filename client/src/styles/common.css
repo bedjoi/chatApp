@@ -111,3 +111,8 @@ input{
 
 
 }
+.btnSend{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    height: auto;
+}
