@@ -1,8 +1,6 @@
 
 import React, { useState } from "react";
-
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { Col, Container, Form, Row, Button} from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
 
@@ -26,12 +24,14 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className='regist'>
-          <div className='registForm'>
-              <div className='signUpParagraph'> 
-                  <h1>Sign Up</h1>
-              </div>
-                <Form onSubmit={Submit}>
+    <Container>
+        
+        <Row>
+            <Col md={5} className="homepage__bg">
+            </Col>
+            
+            <Col md={7} className="d-grid align-items-center justify-content-center">
+            <Form onSubmit={Submit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Name</Form.Label>
                   <Form.Control type="text" placeholder=" Your name" onChange={(e)=> setName(e.target.value)} value={name} />
@@ -57,13 +57,21 @@ export default function RegisterPage() {
                 </Button>
                 <div >
                 <p className="text-center">
-                  You have an account? <Link to="/home">LogIn</Link>
+                  You have an account? <Link to="/">LogIn</Link>
                 </p>
 
 
               </div>
               </Form>
-           </div>
-    </div>
+              
+            </Col>
+
+
+        </Row>  
+
+
+    </Container>
+    
+           
   )
 }

@@ -7,7 +7,20 @@
     overflow-x: hidden;
 }
 
-.home-message-icon {
-    margin-left: 10px;
-    display: inline-block;
+.logForm{
+    background-color: rgba(0, 0, 0, 0.747);
+    color: aliceblue;
+    padding: 20px;
+    width: 30vw;
+    border-radius: 5px;
+}
+.loginP{
+    font-weight: bold;
+    font-size: 40px;
+    color: #ffffff;
+
+}
+.montxtLogin{
+    display: grid;
+    text-align: center;
 }
